@@ -1,6 +1,5 @@
 $(document).ready(function () {
-    console.log("ready");
-
+    
     let filter = `Fox Business,Fox News,The Daily Show with Trevor Noah,Washington Post,CBS News,CNN,MSNBC,TODAY,The Late Show with Stephen Colbert,NBC News,Full Frontal with Samantha Bee,Bloomberg Technology,Bloomberg Politics,CBS This Morning,ABC News,USA Today,Fox News Insider`;
 
     $(".subbtn").click(function () {
@@ -29,7 +28,6 @@ function getSearch(q, f, npgtoken) {
     }
     $(".videoSpace").html("");
     $.get(request, function (data) {
-        console.log(data)
         let nextPageToken = data.nextPageToken;        
         for (let i = 0; i < data.items.length; i++) {
             item = data.items[i];
